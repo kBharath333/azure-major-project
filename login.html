@@ -2,15 +2,78 @@
 <html>
 <head>
 <title>Login</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+    text-align:center;
+    margin:0;
+}
+
+.header{
+    background:#222;
+    color:white;
+    padding:15px;
+    font-size:24px;
+}
+
+.container{
+    margin-top:100px;
+}
+
+.card{
+    background:white;
+    width:320px;
+    margin:auto;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.2);
+}
+
+input{
+    width:90%;
+    padding:10px;
+    margin:10px 0;
+    border-radius:8px;
+    border:1px solid #ccc;
+}
+
+button{
+    padding:12px 25px;
+    font-size:16px;
+    border:none;
+    border-radius:8px;
+    background:#ff9800;
+    color:white;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#e68900;
+}
+</style>
+
 </head>
+
 <body>
 
+<div class="header">
+Student Management System
+</div>
+
+<div class="container">
+<div class="card">
 <h2>Student Login</h2>
 
-<input type="text" id="username" placeholder="Username"><br><br>
-<input type="password" id="password" placeholder="Password"><br><br>
+<input type="text" id="username" placeholder="Username">
+<input type="password" id="password" placeholder="Password">
 
+<br>
 <button onclick="login()">Login</button>
+
+</div>
+</div>
 
 <script src="script.js"></script>
 
