@@ -1,6 +1,71 @@
-<h1>Azure Major Project</h1>
-<p>Deployment successful</p>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Student Portal</title>
+<style>
+body{
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+    text-align:center;
+    margin:0;
+}
 
-<a href="login.html">
-    <button>Go to Login</button>
-</a>
+.header{
+    background:#222;
+    color:white;
+    padding:15px;
+    font-size:24px;
+}
+
+.container{
+    margin-top:100px;
+}
+
+button{
+    padding:12px 25px;
+    font-size:18px;
+    border:none;
+    border-radius:8px;
+    background:#ff9800;
+    color:white;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#e68900;
+}
+
+.card{
+    background:white;
+    width:300px;
+    margin:auto;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.2);
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+Student Management System
+</div>
+
+<div class="container">
+<div class="card">
+<h2>Welcome</h2>
+<p>Login to access student dashboard</p>
+
+<button onclick="goLogin()">Go to Login</button>
+</div>
+</div>
+
+<script>
+function goLogin(){
+    window.location.href="login.html";
+}
+</script>
+
+</body>
+</html>
