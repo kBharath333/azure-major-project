@@ -1,13 +1,15 @@
-const http = require("http");
-const fs = require("fs");
+const express = require("express");
+const path = require("path");
 
-const server = http.createServer((req, res) => {
-  fs.readFile("index.html", (err, data) => {
-    res.writeHead(200, { "Content-Type": "text/html" });
-    res.write(data);
-    res.end();
-  });
+const app = express();
+const port = process.env.PORT || 3000;
+
+app.use(express.static(path.join(__dirname)));
+
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "index.html"));
 });
 
-const port = process.env.PORT || 3000;
-server.listen(port);
+app.listen(port, () => {
+  console.log("Server running on port " + port);
+});
